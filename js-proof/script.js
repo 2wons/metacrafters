@@ -29,12 +29,14 @@ function listNFTs () {
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-   console.log(`Total NFt supply: ${myNFTs.length}`)
+   return myNFTs.length
 }
 
 // call your functions below this line
 mintNFT("JimboCoin", 12000)
 mintNFT("SuperCoin", 13000)
-mintNFT("DogeCoin", 9999)
+mintNFT("ClubCoin", 9999)
+mintNFT("ScumCoin", 99233299)
+
 listNFTs()
-getTotalSupply()
+console.log(`Total NFT supply: ${getTotalSupply()}`)
