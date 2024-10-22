@@ -15,6 +15,11 @@ contract CorToken is ERC20, ERC20Burnable, Ownable {
         Ownable(initialOwner)
     {}
 
+    function transfer(address _to, uint256 _value) public override returns (bool) {
+        _transfer(msg.sender, _to, _value); 
+        return true;
+    }
+
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
     }
